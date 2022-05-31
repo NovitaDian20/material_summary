@@ -1,0 +1,48 @@
+31 May 22
+Step by step download install tensorflow throuh cpu not gpu
+1'st way
+pip install -user virtualenv
+pip install --upgrade tensorflow 
+python
+import tensorflow
+jbsnjknkjvknevjvn
+
+if there is any porblems llike :
+W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+the solution is we have to add 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+import tensorflow as tf
+===========================================================================================================
+2'nd way
+pip3 install –upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.0.0-py3-none-any.whl
+
+kde: {'scatter', 'kde', 'hist', 'reg'}
+kde = is a non-parametric way to estimate the probability density function(PDF) of a random variable. This function uses Gaussian kernels and includes autimatic bandwidth determination.
+
+untuk mengevaluasi skor korelasi (arah negative, positive, dan pola acak) kita bisa menggunakan fungsi corr()
+1. annot= bool lor rectangular dataset, optional
+[Note when we use this annot, the DataFrames will match on position, not index]
+2. cmap=matplotlib colormap name or object, or list of colors, optional.
+The mapping from data values to color space. If not provided, the default will depend on wether center is set.
+
+Data preparation merupakan tahapan penting dalam proses pengembangan model machine learning. 
+Data preparation juga merupakan proses transformasi pada data sehingga menjadi bentuk yang cocok untuk proses pemodelan. Ada beberapa tahapan:
+a) seleksi fitur
+b) transformasi data
+c) feature engineering
+d) dimensionality reduction
+
+Pada bagian ini kita juga akan melakukan 4 tahap persiapan data, yaitu:
+-Encoding fitur category
+    salah satu teknik teknik yag digunakan adalah teknik [one-hot-encoding]
+    Library scikit-learn menyediakan fungsi ini untuk mendapatkan fitur baru yang sesuai sehingga dapat mewakili variabel kategori.
+    
+-Reduksi dimensi dengan PCA (Principal Component Analysis)
+    adalah prosedur yang mengurangi jumlah fitur dengan tetap mempertahankan informasi pada data.
+    PCA adalah teknik untuk mereduksi dimensi, mengekstraksi fitur, dan menstransformasikan data dari n-dimensional space ke dalam msistem berkoordinat baru dengan dimensi m.
+    PCA bekerja menggunakan metode aljabar linier. Ia menasumsikan bahwa sekumpulan data pada arah dengan varians terbesar merupakan yang paling penting(utama)
+    PCA umumnya digunakan ketika variabel dalam data memiliki korelasi yang tinggi. Korelasi tinggi ini menunjukan data yang berulang atau redundant.
+-Pembagian dataset dengan fungsi train_split dari library sklearn
+-Standarisasi.
